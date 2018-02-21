@@ -6,14 +6,16 @@ class WithdrawController < ApplicationController
 	def amount
  		@user = User.find_by_id(session[:user_id])
   		@user.saving.cash = @user.saving.cash - params[:amount].to_i
-  		if
-  		params[:amount].to_i < 0
-  		redirect_to '/protected'
-		return 
-	else
-		@user.saving.save
-		redirect_to '/withdraw'
 
+  		if 
+  			@user.saving.cash < params[:amount].to_i
+  			redirect_to '/protected'
+  		elsif 
+  			params[:amount].to_i < 0
+  			redirect_to '/protected' 
+		else
+			@user.saving.save
+			redirect_to '/withdraw'
 		end
 	end
 end
