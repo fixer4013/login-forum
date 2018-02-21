@@ -1,0 +1,5 @@
+Implement account withdraw feature
+
+1. Add a new column in the database for the account balance
+2. Create an html page with a input button and a withdraw button. The input button takes the amount that needs to be withdrawn
+3. On submit of the form, the application should update the database (decement the account's balance)	

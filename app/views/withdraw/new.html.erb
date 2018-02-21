@@ -1,0 +1,7 @@
+Current balance: <%= @user.saving.cash %>
+<form action="/withdraw" method="post">
+<label>Money:</label>
+<input type="number" name="amount"/><br />
+<button type="submit">Withdraw</button><br />
+</form>
+
