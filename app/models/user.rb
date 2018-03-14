@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	validates :username, presence: true
 
 	has_one :saving
+	has_many :timetable
 
 	def authenticate(pass)
 		 if password == pass
