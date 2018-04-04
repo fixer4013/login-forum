@@ -12,4 +12,7 @@ Rails.application.routes.draw do
 
   get '/withdraw', to: 'withdraw#new'
   post '/withdraw', to: 'withdraw#amount'
+
+  get '/deposit', to: 'deposit#new'
+  post '/deposit', to: 'deposit#amount'
 end

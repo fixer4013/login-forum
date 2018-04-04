@@ -5,3 +5,7 @@ Current balance: <%= @user.saving.cash %>
 <button type="submit">Withdraw</button><br />
 </form>
 
+<ul>
+<% @user.timetables %>
+<li><% ammount: params[:amount] %></li>
+</ul>
