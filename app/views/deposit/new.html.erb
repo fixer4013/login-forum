@@ -1,0 +1,6 @@
+Current balance: <%= @user.saving.cash %>
+<form action="/deposit" method="post">
+<label>Money:</label>
+<input type="number" name="amount"/><br />
+<button type="submit">Deposit</button><br />
+</form>
